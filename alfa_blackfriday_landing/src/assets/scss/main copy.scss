@@ -1,0 +1,218 @@
+// тк мы к ним обращаемся везде ниже
+@import "utils/vars";
+@import "utils/reset";
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+    
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 14px;
+  }
+}
+.wrapper {
+  @media screen and (min-width: $desktopWidth) {
+		width:1000px;
+  }
+  @media screen and (min-width: $tableWidth) {
+    font-size: 15px;
+    width:600px;
+  }
+  @media screen and (min-width: $phoneWidth) {
+    font-size: 14px;
+    width:300px;
+  }
+}
+
+
+body {
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  background-color: #290003;
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 17px;
+
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1 {
+  width: 431px;
+height: 142px;
+font-size: 43px;
+font-weight: 700;
+// line-height: 50px;
+}
+h2 {
+font-size: 30px;
+font-weight: 700;
+// line-height: 50px;
+}
+
+input, textarea, select, button { border: 1px solid $border-base; }
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 22px 0 0 0;
+}
+
+
+
+section, .section {
+  position: relative;
+  padding: 10px 0;
+  @media screen and (max-width: $desktopWidth) {
+    padding: 36px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 28px 0;
+  }
+  @media screen and (max-width: $desktopWidth) {
+    padding: 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+
+.wrapper-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &.wrapper-content--fixed {
+    margin-top: 80px;
+  }
+}
+
+.container {
+  width: 100%;
+  flex: 0 0 auto;
+  position: relative;
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+}
+.order-form {
+  @media screen and (min-width: $desktopWidth) {
+      // position: absolute;
+  }
+  @media screen and (max-width: $tableWidth) {
+
+  }
+  @media screen and (max-width: $phoneWidth) {
+
+  }
+}
+
+@mixin form-border {
+  margin-left: 70px;
+}
+
+// @mixin form-styles {
+//   color:#ffffff;
+// }
+
+h2 {
+  // @include form-border;
+  margin-top:55px;
+}
+
+label {
+  // @include form-border;
+  margin-top:45px;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #3f2324;
+  text-align:start;
+  // line-height: 70px; 
+ 
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  // margin-bottom:5px;
+  // line-height: 60px;
+  
+  input, select, option {
+    border-style:none;
+    border-radius: 0;
+    color:#ffffff;
+    margin:0;
+    margin-bottom: 7px;
+    background-color: transparent;   
+  } 
+  input, option {
+    padding-left:10px;
+    
+  }
+
+    select {
+    color: #ffffff;
+    margin-bottom: 7px;
+  }
+  span {
+    margin-bottom: 7px;
+  }
+}
+
+       
+    input {
+      background-color:  transparent;         
+    }
+    button {
+      // @include form-border;
+      /* Style for "base" */
+      // width: 279px;
+      max-width:300px;
+      // margin-left:70px!important;
+      height: 57px;
+      background-color: #ea5757!important;
+      border-style:none!important;
+      border-radius: 0;
+      margin: 50px 0 0 0;
+      color: #ffffff;
+
+      
+    }
+    .form-control {
+      background-color:transparent;
+    }
+
+    button:disabled {
+      background: #dddddd;
+    }
+  
+
+@import "./common.scss";

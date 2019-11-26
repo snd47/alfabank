@@ -1,0 +1,462 @@
+// тк мы к ним обращаемся везде ниже
+@import "utils/vars";
+@import "utils/reset";
+
+
+
+@import "./common.scss";
+a {
+  color: #eb5757;
+}
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  font-family: Montserrat;
+  font-size: 17px;
+
+  // ++++++++++++++++++++ IPhone 5
+  @media only screen and (max-width: $tableWidth) {
+    font-size: 14px;
+  }
+  // ++++++++++++++++++++ PIXEL
+  @media only screen and (min-width: $tableWidth) {
+    font-size: 15px;
+  }
+    // ++++++++++++++++++++ TABLET
+    @media only screen and (min-width: $smDesktopWidth) { 
+      font-size: 16px;
+  }
+  // ++++++++++++++++++++ DISPLAY
+  @media only screen and (min-width: $designWidth) { 
+    font-size: 16px;
+  }
+
+}
+body{
+  background: url('~@/img/black_friday.png');
+  background-color: #290003;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  font-size: 14px;
+  margin: 0 auto;
+    // ++++++++++++++++++++ IPhone 5
+    @media only screen and (max-width: $tableWidth) {
+    //  width:600px;
+      background-size: 800px;
+      background-position: top;
+    }
+    // ++++++++++++++++++++ PIXEL
+    @media only screen and (min-width: $tableWidth) {
+      background-size: 1000px;
+      background-position: right top;
+    }
+      // ++++++++++++++++++++ TABLET
+      @media only screen and (min-width: $smDesktopWidth) { 
+        background-size: 800px;
+        background-position: center top;
+        width:1200px;
+    }
+    // ++++++++++++++++++++ DISPLAY
+    @media only screen and (min-width: $designWidth) { 
+        background-size:1200px;
+        background-position: center top;
+        width:1670px;
+    }
+
+}
+
+header, main {
+  display: block;
+      // ++++++++++++++++++++ IPhone 5
+      @media only screen and (max-width: $tableWidth) {
+        min-width:$smPhoneWidth ;
+      }
+      // ++++++++++++++++++++ PIXEL
+      @media only screen and (min-width: $tableWidth) {
+        min-width:$phoneWidth;
+      }
+        // ++++++++++++++++++++ TABLET
+        @media only screen and (min-width: $smDesktopWidth) { 
+          min-width:$tableWidth;
+      }
+      // ++++++++++++++++++++ DISPLAY
+      @media only screen and (min-width: $designWidth) { 
+        min-width:$designWidth;
+      }
+}
+header {
+  // ++++++++++++++++++++ IPhone 5
+  @media only screen and (max-width: $tableWidth) {
+    margin:40px 0 0 40px;
+  }
+  // ++++++++++++++++++++ PIXEL
+  @media only screen and (min-width: $tableWidth) {
+    margin:40px 0 0 120px;
+  }
+    // ++++++++++++++++++++ TABLET
+    @media only screen and (min-width: $smDesktopWidth) { 
+      margin:40px 0 0 0 ;
+  }
+  // ++++++++++++++++++++ DISPLAY
+  @media only screen and (min-width: $designWidth) { 
+    margin:70px 0 0 0 ;
+  }
+}
+article{
+      display: flex;
+    // ++++++++++++++++++++ IPhone 5
+    @media only screen and (max-width: $tableWidth) {
+      flex-direction:column;
+    }
+    // ++++++++++++++++++++ PIXEL
+    @media only screen and (min-width: $tableWidth) {
+      flex-direction:column;
+    }
+      // ++++++++++++++++++++ TABLET
+      @media only screen and (min-width: $smDesktopWidth) { 
+      justify-content: space-between;
+      flex-direction:row;
+    }
+    // ++++++++++++++++++++ DISPLAY
+    @media only screen and (min-width: $designWidth) { 
+     
+      justify-content: space-between;
+      flex-direction:row;
+    }
+}
+section{
+  @media only screen and (max-width: $tableWidth) {
+    background:rgba(41, 0, 3, 0.7);
+    max-width:100%;
+  }
+  // ++++++++++++++++++++ PIXEL
+  @media only screen and (min-width: $tableWidth) {
+    background: rgba(41, 0, 3, 0.7);
+    max-width: 100%;
+  }
+    // ++++++++++++++++++++ TABLET
+    @media only screen and (min-width: $smDesktopWidth) { 
+      background: none;
+      max-width: 30%;
+  }
+  // ++++++++++++++++++++ DISPLAY
+  @media only screen and (min-width: $designWidth) { 
+    background: none;
+    max-width: 30%;
+  }
+}
+.main{
+  @media only screen and (max-width: $tableWidthS) {
+    padding: 20px 0 20px 30px;
+  }
+  // ++++++++++++++++++++ PIXEL
+  @media only screen and (min-width: $tableWidth) {
+    padding: 20px 30px 20px 120px;
+  }
+    // ++++++++++++++++++++ TABLET
+    @media only screen and (min-width: $smDesktopWidth) { 
+      padding: 0;
+  }
+  // ++++++++++++++++++++ DISPLAY
+  @media only screen and (min-width: $designWidth) { 
+    padding: 0;
+  }
+}
+
+h1 {
+
+font-weight: 700;
+ // ++++++++++++++++++++ IPhone 5
+ @media only screen and (max-width: $tableWidth) {
+  font-size: 24px;
+  margin-top:20px;
+}
+// ++++++++++++++++++++ PIXEL
+@media only screen and (min-width: $tableWidth) {
+  font-size: 30px;
+  margin-top:30px;
+}
+  // ++++++++++++++++++++ TABLET
+  @media only screen and (min-width: $smDesktopWidth) { 
+    font-size: 35px;
+    margin-top:70px;
+}
+// ++++++++++++++++++++ DISPLAY
+@media only screen and (min-width: $designWidth) { 
+  font-size: 43px;
+  margin-top:70px;
+}
+}
+h2 {
+font-size: 30px;
+font-weight: 700;
+// line-height: 50px;
+}
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 22px 0 0 0;
+}
+
+li.feature-item p:first-child {
+  font-size:24px;
+}
+li p { 
+position: relative;
+padding: 0 0 0 70px;
+}
+
+ul li:before {
+content:"";
+max-width:62px;
+max-height: 62px;
+width: 100%;
+height:100%;
+position: absolute;
+/* left: 50px;
+top: 80px; */
+
+}
+ ul.features-list li:nth-child(1)::before {
+  background:  url("~@/img/speed.png") scroll 0 0 no-repeat;
+}
+ul.features-list li:nth-child(2)::before {
+  background:  url("~@/img/pizza.png") scroll 0 0 no-repeat;
+}
+ul.features-list li:nth-child(3)::before {
+  background:  url("~@/img/cashu.png") scroll 0 0 no-repeat;
+}
+ul.features-list li:nth-child(4)::before {
+  background:  url("~@/img/calendar.png") scroll 0 0 no-repeat;
+} 
+.order-form {
+  background-color: #290003;
+  // max-width:880px;
+
+  
+  @media only screen and (max-width: $tableWidth) {
+    padding:60px 60px 0 40px;
+    margin: 20px 0 20px 0;
+  }
+  // ++++++++++++++++++++ PIXEL
+  @media only screen and (min-width: $tableWidth) {
+    padding:60px 60px 0 140px;
+    margin: 20px 0 20px 0;
+  }
+    // ++++++++++++++++++++ TABLET
+    @media only screen and (min-width: $smDesktopWidth) { 
+  }
+  // ++++++++++++++++++++ DISPLAY
+  @media only screen and (min-width: $designWidth) { 
+    padding:60px 60px 0 70px;
+    margin: -120px 0 -200px 0;
+  }
+  
+
+
+        form {
+        max-height:865px;
+        
+
+        @media only screen and (max-width: $tableWidth) {
+          max-width:100%;
+        }
+        // ++++++++++++++++++++ PIXEL
+        @media only screen and (min-width: $tableWidth) {
+          max-width:70%;
+        }
+          // ++++++++++++++++++++ TABLET
+          @media only screen and (min-width: $smDesktopWidth) { 
+            max-width:305px;
+        }
+        // ++++++++++++++++++++ DISPLAY
+        @media only screen and (min-width: $designWidth) { 
+          max-width:305px;
+        }
+        }
+        .agree-checkbox {
+          input {
+            margin-right:10px;
+          }
+          span {
+            font-size:12px;
+          }
+        }
+   
+  }
+  label {
+    // @include form-border;
+    margin-top:45px;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #3f2324;
+    text-align:start;
+    // line-height: 70px; 
+   
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    // margin-bottom:5px;
+    // line-height: 60px;
+    
+    input, select, option {
+      border-style:none;
+      border-radius: 0;
+      color:#ffffff;
+      margin:0;
+      margin-bottom: 7px;
+      background-color: transparent;   
+    } 
+    input, option {
+      padding-left:10px;
+      
+    }
+  
+      select {
+      color: #ffffff;
+      margin-bottom: 7px;
+    }
+    span {
+      margin-bottom: 7px;
+    }
+  }
+  
+         
+      input {
+        background-color:  transparent;         
+      }
+      button {
+        // @include form-border;
+        /* Style for "base" */
+        // width: 279px;
+        max-width:300px;
+        // margin-left:70px!important;
+        height: 57px;
+        background-color: #ea5757!important;
+        border-style:none!important;
+        border-radius: 0;
+        margin: 50px 0 0 0;
+        color: #ffffff;
+  
+        
+      }
+      .form-control {
+        background-color:transparent;
+      }
+  
+      button:disabled {
+        background: #dddddd;
+      }
+      footer{
+        height: 150px;
+        width:100%;
+        background-color: #250305;
+        z-index:10;
+
+        @media only screen and (max-width: $tableWidth) {
+          margin: 0 0 70px 0!important;
+        }
+        // ++++++++++++++++++++ PIXEL
+        @media only screen and (min-width: $tableWidth) {
+          margin:50px 0 40px 0!important;
+        }
+          // ++++++++++++++++++++ TABLET
+          @media only screen and (min-width: $smDesktopWidth) { 
+            margin:50px 0 40px 0!important;
+        }
+        // ++++++++++++++++++++ DISPLAY
+        @media only screen and (min-width: $designWidth) { 
+          margin:50px 0 40px 0!important;
+        }
+
+      }
+      .footer{
+        
+        @media only screen and (max-width: $tableWidth) {
+          width:100%;
+        }
+        // ++++++++++++++++++++ PIXEL
+        @media only screen and (min-width: $tableWidth) {
+          width:100%;
+        }
+          // ++++++++++++++++++++ TABLET
+          @media only screen and (min-width: $smDesktopWidth) { 
+            width:60%;
+        }
+        // ++++++++++++++++++++ DISPLAY
+        @media only screen and (min-width: $designWidth) { 
+          width:60%;
+        }
+      }
+      
+      
+      ul.footer-list {
+         display:flex;
+         
+         @media only screen and (max-width: $tableWidthS) {
+          flex-direction: column;
+          align-items:center;
+        }
+        // ++++++++++++++++++++ PIXEL
+        @media only screen and (min-width: $tableWidth) {
+          justify-content: space-around;
+            flex-direction: row;
+        }
+          // ++++++++++++++++++++ TABLET
+          @media only screen and (min-width: $smDesktopWidth) { 
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        // ++++++++++++++++++++ DISPLAY
+        @media only screen and (min-width: $designWidth) { 
+          justify-content: space-between;
+          flex-direction: row;
+        }
+       }
+       ul.footer-list li {
+           
+        @media only screen and (max-width: $tableWidthS) {
+         min-width:40%;
+         
+       }
+
+       @media only screen and (max-width: $tableWidthS) {
+         padding: 0 0 40px 0;
+       }
+       // ++++++++++++++++++++ PIXEL
+       @media only screen and (min-width: $tableWidth) {
+        
+       }
+         // ++++++++++++++++++++ TABLET
+         @media only screen and (min-width: $smDesktopWidth) { 
+          
+       }
+       // ++++++++++++++++++++ DISPLAY
+       @media only screen and (min-width: $designWidth) { 
+        
+       }
+        
+      }
+   
+       ul.footer-list li:nth-child(1)::before {
+        background:  url("~@/img/phone.png") scroll 0 0 no-repeat;
+        
+      }
+      
+        
+        
+        ul.footer-list li:nth-child(2)::before {
+          background:  url("~@/img/card.png") scroll 0 0 no-repeat;
+      
+      }
+        
+        
+        ul.footer-list li:nth-child(3)::before {
+          background:  url("~@/img/wifi.png") scroll 0 0 no-repeat;
+      }
+       
+
+
+
